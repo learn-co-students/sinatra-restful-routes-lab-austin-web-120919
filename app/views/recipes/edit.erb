@@ -1,0 +1,19 @@
+<h2>Make A More Incredible Incredible <%= @recipe.name %> Recipe</h2>
+<h3>Ingredients: <%= @recipe.ingredients %>
+<br>
+    Cook Time: <%= @recipe.cook_time %>
+</h3>
+
+<form method="POST" action="/recipes/<%= @recipe.id %>">
+    <p>
+        <input id="hidden" type="hidden" name="_method" value="patch">
+        Name: <input type="text" name="name" value="That name was perfect don't change it!!!">
+        <br>
+        Ingredients: <input type="text" name="ingredients" value="Try adding salt for more flavour!">
+        <br>
+        Cook Time: <input type="text" name="cook_time" value="Too dry? Try cooking for less time!">
+        <br>
+        <input type="submit" value="Submit">
+    </p>
+</form>
+
